@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <h3>{% csrf_token %}</h3>
+        <h3>Наименование дисциплин и других видов работ работ{{ form.name_of_disciplnes }}</h3>
+        <h3>количество кредитов{{ form.amount_of_credit }}</h3>
+        <h3>Группа{{ form.group }}</h3>
+        <h3>Количество бюджетных студентов{{ form.amount_of_stud_budget }}</h3>
+        <h3>Количество контрактных студентов{{ form.amount_of_stud_contract }}</h3>
+        <h3>Общее количество студентов{{ form.amount_of_all_students }}</h3>
+        <h3>Семестер{{ form.semester }}</h3>
+        <h3>Лекции / По учебному плану{{ form.study_plan }}</h3>
+        <h3>Лекции / Зачитывается в нагрузку кафедры{{ form.nagruzka_kafedry }}</h3>
+        <h3>Практические занятия / По учебному плану{{ form.pract_study_plan }}</h3>
+        <h3>Практические занятия / Зачитывается в нагрузку кафедры{{ form.pract_nagruzka_kafedry }}</h3>
+        <h3>Лаб. работы / По учебному плану{{ form.lab_study_plan }}</h3>
+        <h3>Лаб. работы / Зачитывается в нагрузку кафедры{{ form.lab_nagruzka_kafedry }}</h3>
+        <h3> Руковод. КРиКП{{ form.rukovod }}</h3>
+        <h3>Рецензирование. КР{{ form.recenzirov }}</h3>
+        <h3>Прием СРС{{ form.priem_SRS }}</h3>
+        <h3>Практика / Учебная{{ form.prac_uchebnaya }}</h3>
+        <h3>Практика / Произведственная{{ form.prac_proizvodstnaya }}</h3>
+        <h3>Практика / Предкфалификационная{{ form.prac_predkval }}</h3>
+        <h3>Практика / Педагогическая{{ form.prac_pedagog }}</h3>
+        <h3>Практика / научно-исследовательская{{ form.prac_nauchno_isled }}</h3>
+        <h3>Контроль / текущий 1{{ form.control_current_1 }}</h3>
+        <h3>Контроль / текущий 2{{ form.control_current_2 }}</h3>
+        <h3>Контроль / текущий 3{{ form.control_current_3 }}</h3>
+        <h3>Контроль / Итоговый (экзамен){{ form.control_itogovyi }}</h3>
+        <h3>Защита вып. квал работы / руководство ВКР{{ form.zachita_rukovodstvo_VKR }}</h3>
+        <h3>Защита вып. квал работы / консульт по разделам{{ form.zachita_consult }}</h3>
+        <h3>Защита вып. квал работы / Рецензирование{{ form.zachita_recenzirovanie }}</h3>
+        <h3>Защита вып. квал работы / участие в ГАК{{ form.zachita_uchastie_GAK }}</h3>
+        <h3>Нормконтр{{ form.normokontr }}</h3>
+        <h3>Магистратура{{ form.magister }}</h3>
+        <h3>Аспирантура, докторонтура{{ form.aspirantura_docturantura }}</h3>
+        <h3>Онлайн{{ form.online }}</h3>
+        <h3>Офлайн{{ form.ofline }}</h3>
+        <h3>Академ. сов{{ form.academ_sov }}</h3>
+        <h3>Руководство кафедрой{{ form.rukovod_kafedroi }}</h3>
+        <h3>Руководство деканатом{{ form.rukovod_dekanatom }}</h3>
+        <h3>Прочие{{ form.prochie }}</h3>
+        <h3>Всего учебных часов по расчету{{ form.all_education_time }}</h3>
+        <h3>ФИО учителей{{ form.name_of_teacher }}</h3>
+        <h3>бюджет{{ form.budget }}</h3>
+        <h3>Контракт{{ form.contract }}</h3>
+        <h3>По часовой фонд{{ form.po_chasovoi_fond }}</h3>
+        </form>
+</body>
+</html>
