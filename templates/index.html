@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=1200" > -->
+    <title>TABLE</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                {% csrf_token %}
+                <th rowspan="3" class="fw_100 w_350" style="width: 350px;">Наименование дисциплин и других видов работ{{ form.name_of_disciplnes }}</th>
+
+                <th rowspan="3">
+                    <div>Количество кредитов{{ form.amount_of_credit }}</div>
+                </th>
+
+                <th rowspan="3" class="fw_100">Группа {{ form.group }}</th>
+                <th rowspan="3">
+                    <div>Кол. студ.бюджет {{ form.amount_of_stud_budget }}</div>
+                </th>
+                <th rowspan="3">
+                    <div>Кол. студ.контракт {{ form.amount_of_stud_contract }}</div>
+                </th>
+                <th rowspan="3">
+                    <div>Общее количество студентов {{ form.amount_of_all_students }}</div>
+                </th>
+                <th rowspan="3">
+                    <div>Семестр {{ form.semester }}</div>
+                </th>
+                <th colspan="2" class="fw_100">Лекции</th>
+                <th colspan="2" class="fw_100">Практ. зан.</th>
+                <th colspan="2" class="fw_100">Лаб.раб.</th>
+                <th colspan="24" class="fw_100"> Зачитывается в нагрузку кафедры (ч.)</th>
+            </tr>
+            <tr>
+
+                <th rowspan="2">
+                    <div>По учебному плану {{ form.study_plan }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Зачитывается в нагрузку кафедры (ч.) {{ form.nagruzka_kafedry }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>По учебному плану {{ form.pract_study_plan }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Зачитывается в нагрузку кафедры (ч.) {{ form.pract_nagruzka_kafedry }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>По учебному плану {{ form.lab_study_plan }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Зачитывается в нагрузку кафедры (ч.) {{ form.lab_nagruzka_kafedry }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Руковод. КРиКП {{ form.rukovod }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Рецензиров. КР {{ form.recenzirov }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Прием СРС {{ form.priem_SRS }}</div>
+                </th>
+                <th colspan="5" class="fw_100">Практика {{ form.prac_uchebnaya }}</th>
+                <th colspan="4" class="fw_100">Контроль</th>
+                <th colspan="4" class="fw_100">Защита вып. квал. работы</th>
+                <th rowspan="2">
+                    <div>Нормоконтр {{ form.normokontr }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Магистрат. {{ form.magister }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Аспирантура, докторонтура {{ form.aspirantura_docturantura }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Онлайн {{ form.online }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Офлайн {{ form.ofline }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Академ. Сов. {{ form.academ_sov }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Руководство кафедрой {{ form.rukovod_kafedroi }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Руководство деканатом{{ form.rukovod_dekanatom }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Прочие {{ form.prochie }}</div>
+                </th>
+                <th rowspan="2">
+                    <div>Всего учебных часов по расчету {{ form.all_education_time }}</div>
+                </th>
+            </tr>
+            <tr>
+
+                
+                <th>
+                    <div> Учебная {{ form.prac_uchebnaya }}</div>
+                </th>
+
+                <th>
+                    <div>Производ. {{ form.prac_proizvodstnaya }}</div>
+                </th>
+                
+                <th>
+                    <div>Предквал. {{ form.prac_predkval }}</div>
+                </th>
+                <th>
+                    <div>Педагогическая {{ form.prac_pedagog }}</div>
+                </th>
+                <th>
+                    <div>Научно-исследовательская {{ form.prac_nauchno_isled }}</div>
+                </th>
+                <th>
+                    <div>текущий (1 контр. точка) {{ form.control_current_1 }}</div>
+                </th>
+                <th>
+                    <div>текущий (2 контр. точка) {{ form.control_current_2 }}</div>
+                </th>
+                <th>
+                    <div>текущий (3 контр. точка) {{ form.control_current_3 }}</div>
+                </th>
+                <th>
+                    <div>итоговый (экзамен) {{ form.control_itogovyi }}</div>
+                </th>
+                <th>
+                    <div>руководство проектиров. {{ form.zachita_rukovodstvo_VKR }}</div>
+                </th>
+                <th>
+                    <div>консульт. по разделам {{ form.zachita_consult }}</div>
+                </th>
+                <th>
+                    <div>рецензиров. проектов {{ form.zachita_recenzirovanie }}</div>
+                </th>
+
+                <th>
+                    <div> участие в ГАК {{ form.zachita_uchastie_GAK }}</div>
+                </th>
+
+                <th>
+                    <div>ФИО учителей{{ form.name_of_teacher }}</div>
+                </th>
+
+                <th>
+                    <div>Бюджет {{ form.budget }}</div>
+                </th>
+
+                <th>
+                    <div>Контракт{{ form.contract }}</div>
+                </th>
+
+                <th>
+                    <div>По часовой фонд{{ form.po_chasovoi_fond }}</div>
+                </th>
+            </tr>
+        <tbody>
+
+    </table>
+
+</html>

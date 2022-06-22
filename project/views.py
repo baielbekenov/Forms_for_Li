@@ -13,7 +13,7 @@ def table(request):
     context = {'form': form}
     return render(request, 'table.html', context)
 
-def table_two(request):
+def index(request):
     form = TableForms()
     if request.method == 'POST':
         form = TableForms(request.POST)
@@ -21,7 +21,7 @@ def table_two(request):
             form.save()
 
     context = {'form': form}
-    return render(request, 'table_two.html', context)
+    return render(request, 'index.html', context)
 
 
 
